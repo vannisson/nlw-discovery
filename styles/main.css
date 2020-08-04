@@ -10,8 +10,8 @@ Ao usar uma id (Não pode se repetir), para identifica no CSs: "#nome_da_id"
     --color-primary: #8257E5;
     --color-primary-dark: #774DD6;
     --color-primary-darker: #6842C2;
-    --color-secundary: #04D361;
-    --color-secundar-dark: #04BF58;
+    --color-secondary: #04D361;
+    --color-secondary-dark: #04BF58;
     --color-title-in-primary: #FFFFFF;
     --color-text-in-primary: #D4C2FF;
     --color-text-title: #32264D;
@@ -33,9 +33,16 @@ html,body {
     height: 100vh;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
 body,input,button,textarea{
     font: 500 1.6rem Poppins;
     color: var(--color-text-base)
+    /*fonte= font: weight size family*/
 }
 
 body {
@@ -46,24 +53,18 @@ body {
 }
 
 #container {
-    width: 90vw; /*Largura*/
+    width: 90vw; /*Largura // vw = viewport*/
     max-width: 700px;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-
-
-    /* 
+@media (min-width: 700px){
+    :root {
+        font-size: 62.5%;
+    }
+}
+ /* 
     1 propriedade = todos os lados
     2 propriedades = altura e largura
     3 propriedades = cima,baixo e os lados respectivamente
     4 propriedades = cima, direita, baixo, esquerda respectivamente
-
-    vw = viewport
-    fonte= font: weight size family
     */
-}
